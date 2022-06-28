@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test
 class GrammarTestOverride {
 
     @Test
-    fun 오버라이딩테스트() {
+    fun `오버라이딩테스트`() {
         var tiger = Tiger()
         tiger.eat()
     }
