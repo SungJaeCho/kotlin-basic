@@ -15,7 +15,7 @@ class GrammarTestCollectionFun {
         println()
 
         println(nameList.filter { it.startsWith("김") })
-        val nameList2 = nameList.map{ "이름 :  $it"} // 조건을 넣으면 그값을 컬렉션으로 반환
+        val nameList2 = nameList.filter { it.startsWith("김") }.map{ "이름 :  $it"} // 조건을 넣으면 그값을 컬렉션으로 반환
         println(nameList2)
         println(nameList.any { it == "김지연" }) //김지연이라는 이름을 가진 데이터가 하나라도 존재하면 true 반환
         println(nameList.all { it.length == 3 }) //리스트에 담긴 모든 데이터의 하나하나의 길이가 3이어야지만 true 반환
@@ -34,6 +34,7 @@ class GrammarTestCollectionFun {
         data class Person(val name: String, val birthYer: Int)
 
         val personList = listOf(
+            Person("가나", 1992),
             Person("유나", 1992),
             Person("조이", 1996),
             Person("츄", 1999),
